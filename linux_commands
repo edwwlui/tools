@@ -2,3 +2,6 @@
 find . -name \*.cpp -exec grep -q "debug" '{}' \; -print
 
 column -t -s $'\t' results.txt | less -S
+
+#primary alignment
+samtools view -F2308
