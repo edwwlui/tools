@@ -5,3 +5,6 @@ column -t -s $'\t' results.txt | less -S
 
 #primary alignment
 samtools view -F2308
+
+#repeat bash command
+while sleep 1; do ls; done
