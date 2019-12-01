@@ -2,7 +2,7 @@
 find . -name \*.cpp -exec grep -q "debug" '{}' \; -print
 
 #I individually
-ls -lht ~|grep 'Jul 15'|awk '{ print $9 }'|xargs -I {} mv {} card_download/
+ls -lht ~|grep 'Jul 15'|awk '{ if ($1!='$i') print $9 }'|xargs -I {} mv {} card_download/
 
 column -t -s $'\t' results.txt | less -S
 
