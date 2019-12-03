@@ -26,3 +26,10 @@ Output Grouping #semicolon at the end, space
 remove var suffix
 i=image.jpg
 convert $i ${i%jpg}png
+
+#parallel
+for i in *gz; do 
+  zcat $i > $(basename $i .gz).unpacked
+done
+
+parallel 'zcat {} > {}.unpacked' ::: *.gz
