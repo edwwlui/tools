@@ -19,3 +19,10 @@ while sleep 1; do ls; done
 awk 'BEGIN{FS="\t";OFS="\t"}$1=$1"_OM"' ORAL_MICROBIOME_genomic.raw_sequence_name>ORAL_MICROBIOME_genomic.sequence_name
 
 ln -s shortcut/to shortcut-name
+
+Output Grouping #semicolon at the end, space
+{ echo "test"; find . -iname "*.png"; ls; } > PNGs.txt
+
+remove var suffix
+i=image.jpg
+convert $i ${i%jpg}png
