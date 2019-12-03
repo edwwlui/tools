@@ -32,4 +32,5 @@ for i in *gz; do
   zcat $i > $(basename $i .gz).unpacked
 done
 
-parallel 'zcat {} > {}.unpacked' ::: *.gz
+#{.} basename only? {} full name?
+parallel 'zcat {} > {.}.unpacked' ::: *.gz
