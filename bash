@@ -34,3 +34,5 @@ done
 
 #{.} basename only? {} full name?
 parallel 'zcat {} > {.}.unpacked' ::: *.gz
+
+awk '{for(i=3;i<=NF;++i)print $i}' 
