@@ -1,6 +1,15 @@
 import smtplib
 import datetime
 import argparse
+"""
+usage: notify.py [-h] [-s SUBJECT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SUBJECT, --subject SUBJECT
+                        subject
+"""
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-s","--subject", type=str,
                             help="subject")
