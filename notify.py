@@ -1,6 +1,7 @@
 import smtplib
 import datetime
 import argparse
+
 """
 usage: notify.py [-h] [-s SUBJECT]
 
@@ -19,9 +20,11 @@ args = parser.parse_args()
 if args.subject==None:
     args.subject=""
 
-s = smtplib.SMTP("mail.cs.hku.hk")
+mail_server='mail.cs.hku.hk'
 sender='edwwlui@gmail.com'
 receiver='edwardlw@connect.hku.hk'
+
+s = smtplib.SMTP(mail_server)
 s.sendmail(sender, receiver, "Subject: "+ args.subject+"\r\n" \
 +str(datetime.datetime.now()))  #body
 s.quit()
