@@ -36,3 +36,6 @@ done
 parallel 'zcat {} > {.}.unpacked' ::: *.gz
 
 awk '{for(i=3;i<=NF;++i)print $i}' 
+
+#char level difference
+git diff --no-index --word-diff-regex=. file1 file2
