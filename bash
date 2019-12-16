@@ -31,7 +31,7 @@ convert $i ${i%jpg}png
 for i in *gz; do 
   zcat $i > $(basename $i .gz).unpacked
 done
-
+vs
 #{.} basename only? {} full name?
 parallel 'zcat {} > {.}.unpacked' ::: *.gz
 
@@ -39,3 +39,6 @@ awk '{for(i=3;i<=NF;++i)print $i}'
 
 #char level difference
 git diff --no-index --word-diff-regex=. file1 file2
+
+for f in *bam; do ( samtools index $f & );done
+for i in $(ls); do echo $i; done
