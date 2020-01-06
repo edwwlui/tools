@@ -42,3 +42,6 @@ git diff --no-index --word-diff-regex=. file1 file2
 
 for f in *bam; do ( samtools index $f & );done
 for i in $(ls); do echo $i; done
+
+#cpp compile
+gcc -Wall -pthread  src/main.c -lm -lz -std=c99 -Wextra -o main
