@@ -27,11 +27,6 @@ remove var suffix
 i=image.jpg
 convert $i ${i%jpg}png
 
-#parallel
-for i in *gz; do 
-  zcat $i > $(basename $i .gz).unpacked
-done
-vs
 #{.} remove extensions
 parallel 'zcat {} > {.}.unpacked' ::: *.gz
 
