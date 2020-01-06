@@ -32,7 +32,7 @@ for i in *gz; do
   zcat $i > $(basename $i .gz).unpacked
 done
 vs
-#{.} basename only? {} full name?
+#{.} remove extensions
 parallel 'zcat {} > {.}.unpacked' ::: *.gz
 
 awk '{for(i=3;i<=NF;++i)print $i}' 
