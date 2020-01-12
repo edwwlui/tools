@@ -42,4 +42,4 @@ for i in $(ls); do echo $i; done
 gcc -Wall -pthread  src/main.c -lm -lz -std=c99 -Wextra -o main
 
 #change /tree/master/ to /trunk/
-git svn clone https://github.com/user/user/trunk/sub1/sub2
+git svn clone https://github.com/user/user/trunk/depth1/depth2
