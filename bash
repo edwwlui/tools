@@ -43,3 +43,6 @@ gcc -Wall -pthread  src/main.c -lm -lz -std=c99 -Wextra -o main
 
 #change /tree/master/ to /trunk/
 git svn clone https://github.com/user/user/trunk/depth1/depth2
+
+cd C:\Program Files\Git\*\app\build\outputs\apk\debug
+C:\Users\Re\AppData\Local\Android\Sdk\platform-tools\adb.exe install -r app-debug.apk
