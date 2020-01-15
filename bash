@@ -4,6 +4,7 @@ find . -name \*.cpp -exec grep -q "debug" '{}' \; -print
 #I individually
 ls -lht ~|grep 'Jul 15'|awk '{ if ($1!='$i') print $9 }'|xargs -I {} mv {} card_download/
 
+#if '\t', then '\' or 't'
 column -t -s $'\t' results.txt | less -S
 
 #primary alignment
