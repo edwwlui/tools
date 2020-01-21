@@ -29,7 +29,7 @@ i=image.jpg
 convert $i ${i%jpg}png
 
 #{.} remove extensions
-parallel 'zcat {} > {.}.unpacked' ::: *.gz
+parallel -trim -dryrun --ungroup --linebuffer --interactive --tmux --timeout 200% 'zcat {} > {/.}.unpacked' ::: *.gz
 
 awk '{for(i=3;i<=NF;++i)print $i}' 
 
