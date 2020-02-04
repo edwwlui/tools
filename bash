@@ -47,3 +47,6 @@ git svn clone https://github.com/user/user/trunk/depth1/depth2
 
 cd C:\Program Files\Git\*\app\build\outputs\apk\debug
 C:\Users\Re\AppData\Local\Android\Sdk\platform-tools\adb.exe install -r app-debug.apk
+
+command > /dev/null 2>&1 &
+command 2>/dev/null 
