@@ -7,3 +7,6 @@ set shiftwidth=4
 set expandtab
 
 set pastetoggle=<F2>
+
+#reformatting, fix indentation
+map <F7> gg=G<C-o><C-o>
