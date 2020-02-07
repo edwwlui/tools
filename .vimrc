@@ -8,5 +8,5 @@ set expandtab
 
 set pastetoggle=<F2>
 
-#reformatting, fix indentation
+" reformatting, fix indentation
 map <F7> gg=G<C-o><C-o>
