@@ -52,3 +52,5 @@ command > /dev/null 2>&1 &
 command 2>/dev/null 
 
 tar -xvf foo.tar.gz genome/refseq/bacteria # Note: no leading slash
+
+du -h --max-depth=1
