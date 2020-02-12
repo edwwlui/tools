@@ -54,3 +54,5 @@ command 2>/dev/null
 tar -xvf foo.tar.gz genome/refseq/bacteria # Note: no leading slash
 
 du -h --max-depth=1
+
+ /nas1/wwlui/samtools-1.10/bin/samtools reheader -c 'sort|uniq'  barcode09_10-8.species.sorted.bam>barcode09_10-8.species.sorted.rehdr.bam; /nas1/wwlui/samtools-1.10/bin/samtools index barcode09_10-8.species.sorted.rehdr.bam
