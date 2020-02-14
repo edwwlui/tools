@@ -1,3 +1,8 @@
+alias l.='ls .'
+alias l..='ls ..'
+alias l...='ls ../..'
+alias l....='ls ../../..'
+
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
