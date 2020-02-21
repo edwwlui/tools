@@ -54,6 +54,9 @@ C:\Users\Re\AppData\Local\Android\Sdk\platform-tools\adb.exe install -r app-debu
 command > /dev/null 2>&1 &
 command 2>/dev/null 
 
+tar -xvzf community_images.tar.gz
+tar -xvzf community_images.tar.gz -C my_images
+#only a folder
 tar -xvf foo.tar.gz genome/refseq/bacteria # Note: no leading slash
 
 du -h --max-depth=1
