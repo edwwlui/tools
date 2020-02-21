@@ -61,3 +61,16 @@ du -h --max-depth=1
  /nas1/wwlui/samtools-1.10/bin/samtools reheader -c 'sort|uniq'  barcode09_10-8.species.sorted.bam>barcode09_10-8.species.sorted.rehdr.bam; /nas1/wwlui/samtools-1.10/bin/samtools index barcode09_10-8.species.sorted.rehdr.bam
 
 echo "test" | gzip > echo.gz
+
+names="l1
+l2"
+
+SAVEIFS=$IFS   # Save current IFS
+IFS=$'\n'      # Change IFS to new line
+names=($names) # split to array $names
+IFS=$SAVEIFS   # Restore IFS
+
+for (( i=0; i<${#names[@]}; i++ ))  #number sign gets number of items in the array, i.e. 2
+do
+    echo "$i: ${names[$i]}"
+done
