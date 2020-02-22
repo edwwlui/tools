@@ -78,4 +78,5 @@ do
     echo "$i: ${names[$i]}"
 done
 
+#col to row
 tr '\n' ' ' < infile
