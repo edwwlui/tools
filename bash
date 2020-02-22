@@ -77,3 +77,5 @@ for (( i=0; i<${#names[@]}; i++ ))  #number sign gets number of items in the arr
 do
     echo "$i: ${names[$i]}"
 done
+
+tr '\n' ' ' < infile
