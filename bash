@@ -34,7 +34,7 @@ convert $i ${i%jpg}png
 
 #{.} remove extensions
 #soft link no effect
-parallel --results all_fastq -trim -dryrun --ungroup --linebuffer --interactive --tmux --timeout 200% 'zcat {} > {/.}.unpacked' ::: *.gz &
+parallel -j 4 --results all_fastq -trim -dryrun --ungroup --linebuffer --interactive --tmux --timeout 200% 'zcat {} > {/.}.unpacked' ::: *.gz &
 
 #char level difference
 git diff --no-index --word-diff-regex=. file1 file2
