@@ -1,8 +1,16 @@
+alias s31='ssh bal31'
+alias s13='ssh bal13'
+alias s2='ssh bal2'
+alias s33='ssh bal33'
+alias sls='less'
+alias ll='ls -alhtF'
+alias la='ls -A'
+alias l='ls -CF'
+alias igv='bash /nas1/wwlui/igv/IGV_Linux_2.7.2/igv.sh >/dev/null 2>&1 &'
 alias l.='ls .'
 alias l..='ls ..'
 alias l...='ls ../..'
 alias l....='ls ../../..'
-
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -10,7 +18,5 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 
 alias mv="mv -i"
-alias cp="cp -i"  
+alias cp="cp -i"
 alias rm="rm -i"
-
-alias igv='bash /nas1/wwlui/igv/IGV_Linux_2.7.2/igv.sh >/dev/null 2>&1 &'
