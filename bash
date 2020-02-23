@@ -80,3 +80,5 @@ done
 
 #col to row
 tr '\n' ' ' < infile
+
+wget -r -np -R "*.html*" http://proteininformatics.org/mkumar/lactamasedb/downloadnuc/
