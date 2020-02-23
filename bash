@@ -21,10 +21,6 @@ minimap2 -a -x map-ont ref.fas query.fq | samtools sort -T tmp -o albacore_outpu
 #repeat bash command
 while sleep 1; do ls; done
 
-
-
-ln -s shortcut/to shortcut-name
-
 Output Grouping #semicolon at the end, space
 { echo "test"; find . -iname "*.png"; ls; } > PNGs.txt
 
@@ -82,3 +78,5 @@ done
 tr '\n' ' ' < infile
 
 wget -r -np -R "*.html*" http://proteininformatics.org/mkumar/lactamasedb/downloadnuc/
+
+conda info --envs
