@@ -80,3 +80,10 @@ tr '\n' ' ' < infile
 wget -r -np -R "*.html*" http://proteininformatics.org/mkumar/lactamasedb/downloadnuc/
 
 conda info --envs
+
+#parallel with var
+my_func(){
+echo $1
+}
+export -f my_func
+parallel my_func ::: *
