@@ -90,3 +90,5 @@ echo $1
 }
 export -f my_func
 parallel my_func ::: *
+
+tmux new -s myname
