@@ -92,3 +92,6 @@ export -f my_func
 parallel my_func ::: *
 
 tmux new -s myname
+
+time -f "%es" bash -c "ls | wc"
+time -f "%es" bash script.sh
