@@ -80,6 +80,10 @@ done
 #col to row
 tr '\n' ' ' < infile
 
+#-r extended RE
+#replace space+char with newline
+sed -r 's/ b| B/\nb/g'  align
+
 wget -r -np -R "*.html*" http://proteininformatics.org/mkumar/lactamasedb/downloadnuc/
 
 conda info --envs
