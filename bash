@@ -55,7 +55,7 @@ command 2>/dev/null
 
 tar -xvzf community_images.tar.gz
 tar -xvzf community_images.tar.gz -C my_images
-#only a folder
+#only a folder, default mkdir -p genomes/refseq/bacteria
 tar -xvf foo.tar.gz genomes/refseq/bacteria #no leading slash, relative path in zip
 
 du -h --max-depth=1
