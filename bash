@@ -99,3 +99,6 @@ tmux new -s myname
 
 time -f "%es" bash -c "ls | wc"
 time -f "%es" bash script.sh
+
+#capped by default 8000
+samtools depth -d 0
