@@ -18,6 +18,8 @@ awk 'BEGIN{FS="\t";OFS="\t"}$1=$1"_OM"' ORAL_MICROBIOME_genomic.raw_sequence_nam
 awk 'BEGIN{FS="\t";OFS="\t"}{print $6,$3,$4,$1}' file
 awk '{for(i=3;i<=NF;++i)print $i}' 
 
+awk_body='{sum+=$3} END { print sum/NR }'
+parallel  "samtools depth -d 0 {}  |  awk '$awk_body' " ::: *bam
 
 minimap2 -a -x map-ont ref.fas query.fq | samtools sort -T tmp -o albacore_output.minimap2.sorted.bam
 
