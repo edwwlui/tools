@@ -1,4 +1,5 @@
 disown %1
+ps -ef
 
 #find "debug" in .cpp in dir recursively
 find . -name \*.cpp -exec grep -q "debug" '{}' \; -print
