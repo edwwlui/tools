@@ -1,6 +1,8 @@
 disown %1
 ps -ef
 
+cat test.fastq | paste - - - - | cut -f 2 | tr -d '\n' | wc -c 
+
 #find "debug" in .cpp in dir recursively
 find . -name \*.cpp -exec grep -q "debug" '{}' \; -print
 
